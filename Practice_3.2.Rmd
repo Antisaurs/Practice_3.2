@@ -9,7 +9,7 @@ after_diet<- c(96,91,81,75,118)
 typeof(after_diet)
 after_diet
 
-WEIGHT_LOSS<- c(after_diet-before_diet)
+WEIGHT_LOSS<- c(paste((((after_diet-before_diet)/before_diet)*100), "%", sep = ""))
 WEIGHT_LOSS
 
 
@@ -24,4 +24,6 @@ bubble_data
 
 bubble_data<- bubble_data[,3:4]
 bubble_data
+
+
 
