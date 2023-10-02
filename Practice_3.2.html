@@ -358,20 +358,20 @@ pre code {
 </div>
 
 
-<p>before_diet&lt;- c(104,95,87,77,112) typeof(before_diet)
-before_diet</p>
-<p>after_diet&lt;- c(96,91,81,75,118) typeof(after_diet) after_diet</p>
-<p>WEIGHT_LOSS&lt;-
-c(paste((((after_diet-before_diet)/before_diet)*100), “%”, sep = ““))
-WEIGHT_LOSS</p>
-<p>BUBBLE_DIET&lt;-
-c(ifelse(after_diet-before_diet&gt;0,“increase_weight”,“decrease_weight”))
-BUBBLE_DIET bubble_data&lt;- data.frame(before_diet,
-after_diet,WEIGHT_LOSS,BUBBLE_DIET) bubble_data</p>
+<p>before_diet&lt;- c(104,95,87,77,112) after_diet&lt;-
+c(96,91,81,75,118))</p>
+<p>LOSS&lt;- c(paste((((after_diet-before_diet)/before_diet)*100), “%”,
+sep = ““)) LOSS</p>
+<p>bubble_data&lt;- data.frame(LOSS) bubble_data</p>
 <p>new_row_names &lt;- c(“subject_1”, “subject_2”, “subject_3”,
 “subject_4”, “subject_5”) rownames(bubble_data) &lt;- new_row_names
 bubble_data</p>
-<p>bubble_data&lt;- bubble_data[,3:4] bubble_data</p>
+<p>Before_and_After &lt;- data.frame(before_diet,after_diet)
+WEIGHT_LOSS&lt;- bubble_data list(WEIGHT_LOSS)</p>
+<p>R &lt;- c(“I_have_difficulty_reading”,
+“I_have_difficulty_memorizing”, “I_am_trying”,“I_am_doing_my_best”)
+BUBBLE_DIET &lt;- list( Before_and_After = Before_and_After, WEIGHT_LOSS
+= WEIGHT_LOSS, R = R) BUBBLE_DIET</p>
 
 
 
