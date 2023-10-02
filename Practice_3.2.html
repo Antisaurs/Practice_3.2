@@ -358,10 +358,11 @@ pre code {
 </div>
 
 
+<p>“HW_practice3.2” author: “林為詮(Lin, Wei-Chuan)” date: “2023-10-02”
+output: html_document</p>
 <p>before_diet&lt;- c(104,95,87,77,112) after_diet&lt;-
 c(96,91,81,75,118))</p>
-<p>LOSS&lt;- c(paste((((after_diet-before_diet)/before_diet)*100), “%”,
-sep = ““)) LOSS</p>
+<p>LOSS&lt;- c((after_diet-before_diet)/before_diet) LOSS</p>
 <p>bubble_data&lt;- data.frame(LOSS) bubble_data</p>
 <p>new_row_names &lt;- c(“subject_1”, “subject_2”, “subject_3”,
 “subject_4”, “subject_5”) rownames(bubble_data) &lt;- new_row_names
