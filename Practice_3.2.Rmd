@@ -1,4 +1,14 @@
+---
+title: "HW_practice3.2"
+author: "YOUR NAME"
+date: "2023-10-02"
+output: html_document
+---
 
+The information should always be there before you knit your file
+
+
+```{r, message = F, warning= F}
 
 before_diet<- c(104,95,87,77,112)
 typeof(before_diet)
@@ -9,21 +19,41 @@ after_diet<- c(96,91,81,75,118)
 typeof(after_diet)
 after_diet
 
-WEIGHT_LOSS<- c(paste((((after_diet-before_diet)/before_diet)*100), "%", sep = ""))
-WEIGHT_LOSS
+new_row_names <- c("subject_1", "subject_2", "subject_3", "subject_4", "subject_5")
 
+TABLE <- data.frame(before_diet, after_diet)
+
+rownames(TABLE) <- new_row_names
+
+
+WEIGHT_LOSS<- c(paste((((after_diet-before_diet)/before_diet)*100), "%", sep = ""))
+WEIGHT_LOSS # good us of % but I asked for a numeric vector (double) 
+typeof(WEIGHT_LOSS) # this is a character
+weight_loss<-(after_diet-before_diet)/before_diet*100
+
+message="something you want to tell me" 
+
+
+my.list.1 <- list(subject=new_row_names, loss=weight_loss, table.loss=data.frame(new_row_names, weight_loss))
+
+BUBBLE_DIET<- list (data_diet=TABLE, data_loss=my.list.1, comment=message)
+str(BUBBLE_DIET)
+
+############### BELOW YOUR CODE UNTOUCHED ###############
 
 BUBBLE_DIET<- c(ifelse(after_diet-before_diet>0,"increase_weight","decrease_weight"))
 BUBBLE_DIET
 bubble_data<- data.frame(before_diet, after_diet,WEIGHT_LOSS,BUBBLE_DIET)
 bubble_data
 
-new_row_names <- c("subject_1", "subject_2", "subject_3", "subject_4", "subject_5")
-rownames(bubble_data) <- new_row_names
-bubble_data
+
+# rownames(bubble_data) <- new_row_names
+#bubble_data
 
 bubble_data<- bubble_data[,3:4]
 bubble_data
+
+```
 
 
 
