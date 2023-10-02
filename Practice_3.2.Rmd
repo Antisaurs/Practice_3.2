@@ -1,29 +1,26 @@
+before_diet<- c(104,95,87,77,112) 
+after_diet<- c(96,91,81,75,118))
 
 
-before_diet<- c(104,95,87,77,112)
-typeof(before_diet)
-before_diet
+
+LOSS<- c(paste((((after_diet-before_diet)/before_diet)*100), "%", sep = ""))
+LOSS
 
 
-after_diet<- c(96,91,81,75,118)
-typeof(after_diet)
-after_diet
 
-WEIGHT_LOSS<- c(paste((((after_diet-before_diet)/before_diet)*100), "%", sep = ""))
-WEIGHT_LOSS
-
-
-BUBBLE_DIET<- c(ifelse(after_diet-before_diet>0,"increase_weight","decrease_weight"))
-BUBBLE_DIET
-bubble_data<- data.frame(before_diet, after_diet,WEIGHT_LOSS,BUBBLE_DIET)
+bubble_data<- data.frame(LOSS)
 bubble_data
 
 new_row_names <- c("subject_1", "subject_2", "subject_3", "subject_4", "subject_5")
 rownames(bubble_data) <- new_row_names
 bubble_data
 
-bubble_data<- bubble_data[,3:4]
-bubble_data
 
+Before_and_After <- data.frame(before_diet,after_diet)
+WEIGHT_LOSS<- bubble_data
+list(WEIGHT_LOSS)
 
+R <- c("I_have_difficulty_reading", "I_have_difficulty_memorizing", "I_am_trying","I_am_doing_my_best")
+BUBBLE_DIET <- list( Before_and_After = Before_and_After, WEIGHT_LOSS = WEIGHT_LOSS, R = R)
+BUBBLE_DIET
 
