@@ -361,7 +361,9 @@ pre code {
 <p>before_diet&lt;- c(104,95,87,77,112) typeof(before_diet)
 before_diet</p>
 <p>after_diet&lt;- c(96,91,81,75,118) typeof(after_diet) after_diet</p>
-<p>WEIGHT_LOSS&lt;- c(after_diet-before_diet) WEIGHT_LOSS</p>
+<p>WEIGHT_LOSS&lt;-
+c(paste((((after_diet-before_diet)/before_diet)*100), “%”, sep = ““))
+WEIGHT_LOSS</p>
 <p>BUBBLE_DIET&lt;-
 c(ifelse(after_diet-before_diet&gt;0,“increase_weight”,“decrease_weight”))
 BUBBLE_DIET bubble_data&lt;- data.frame(before_diet,
